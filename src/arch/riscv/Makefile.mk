@@ -9,7 +9,7 @@ ifeq ($(CONFIG_ARCH_RAMSTAGE_RISCV),y)
 check-ramstage-overlap-regions += stack
 endif
 
-riscv_flags = -I$(src)/arch/riscv/
+riscv_flags = -I$(src)/arch/riscv/ -O0
 
 ifeq ($(CONFIG_ARCH_RISCV_RV64),y)
 _rv_flags += -D__riscv -D__riscv_xlen=64 -D__riscv_flen=64
